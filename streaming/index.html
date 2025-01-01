@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebTorrent Video Player</title>
+</head>
+
+<body>
+    <video controls></video>
+
+    <progress id="progress-bar" value="0" max="100"></progress>
+
+    <span id="status-text">Loading...</span>
+
+    <!-- Load WebTorrent library -->
+    <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
+
+    <script>
+        // After the WebTorrent library is loaded, execute the following script
+        (async () => {
+            // Import the WebTorrent module
+            const WebTorrent = (await import('webtorrent')).default;
+
+            // Create a new WebTorrent client
+            const client = new WebTorrent();
+
+            // Add the magnet link to the client
+            const torrentId = 'magnet:?xt=urn:btih:d031ff44407d794f70e49ebf6e8e0e15a28ecc60&dn=The.Neighborhood.S06E03.Welcome.to.the.Other.Butlers.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb%5BEZTVx.to%5D.mkv%5Beztv%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce';
+            client.add(torrentId);
+
+            // Get the video element
+            const video = document.querySelector('video');
+
+            // Get the progress bar element
+            const progressBar = document.getElementById('progress-bar');
+
+            // Get the status text element
+            const statusText = document.getElementById('status-text');
+
+            // Listen for the 'torrent' event
+            client.on('torrent', (torrent) => {
+                // Get the torrent's files
+                const files = torrent.files;
+
+                // Get the first file (which is the video file)
+                const file = files[0];
+
+                // Create a read stream for the file
+                const stream = file.createReadStream();
+
+                // Pipe the stream to the video element
+                stream.pipe(video);
+
+                // Start playing the video
+                video.play();
+
+                // Listen for the 'progress' event on the torrent object
+                torrent.on('progress', (progress) => {
+                    // Update the progress bar
+                    progressBar.value = progress.percent;
+
+                    // Update the status text
+                    statusText.innerHTML = `Downloading: ${progress.percent}%`;
+                });
+
+                // Listen for the 'done' event on the torrent object
+                torrent.on('done', () => {
+                    // Update the status text
+                    statusText.innerHTML = 'Download complete';
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
