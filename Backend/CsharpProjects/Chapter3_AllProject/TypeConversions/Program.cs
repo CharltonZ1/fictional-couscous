@@ -68,5 +68,5 @@ static void NarrowingAttempt()
 //    }
 }
 
-// OverflowException! can be enabled on a project so that it is automatically checked at runtime. 
+// OverflowException! can be enabled on a project level so that it is automatically checked at runtime. 
 // To allow overflow, use the unchecked keyword.
