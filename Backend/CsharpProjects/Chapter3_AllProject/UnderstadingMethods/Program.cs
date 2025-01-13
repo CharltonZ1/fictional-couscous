@@ -1,8 +1,8 @@
 ﻿Console.WriteLine("***** Fun with Methods *****");
 
-DisplayFanceMessage(message: "Wow! Very Fancy indeed!", textColor: ConsoleColor.DarkRed, backgroundColor: ConsoleColor.White);
+//DisplayFanceMessage(message: "Wow! Very Fancy indeed!", textColor: ConsoleColor.DarkRed, backgroundColor: ConsoleColor.White);
 
-DisplayFanceMessage(backgroundColor: ConsoleColor.Green, textColor: ConsoleColor.Blue, message: "Testing 1, 2, 3");
+//DisplayFanceMessage(backgroundColor: ConsoleColor.Green, textColor: ConsoleColor.Blue, message: "Testing 1, 2, 3");
 
 //EnterLogData("Oh no! Grid can't find data");
 //EnterLogData("Oh no! I can't find the payroll data", "CFO");
