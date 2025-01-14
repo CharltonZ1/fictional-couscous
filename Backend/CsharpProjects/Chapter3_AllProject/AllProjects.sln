@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithMethodOverloading", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithEnums", "FunWithEnums\FunWithEnums.csproj", "{C4189D2B-A7FA-453C-9862-F87A94E33ADA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitwiseOperators", "BitwiseOperators\BitwiseOperators.csproj", "{FD426EF5-AEB7-4556-B60E-A990310A7D22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{C4189D2B-A7FA-453C-9862-F87A94E33ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4189D2B-A7FA-453C-9862-F87A94E33ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4189D2B-A7FA-453C-9862-F87A94E33ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD426EF5-AEB7-4556-B60E-A990310A7D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD426EF5-AEB7-4556-B60E-A990310A7D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD426EF5-AEB7-4556-B60E-A990310A7D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD426EF5-AEB7-4556-B60E-A990310A7D22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
