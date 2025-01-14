@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstadingMethods", "Unde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithMethodOverloading", "FunWithMethodOverloading\FunWithMethodOverloading.csproj", "{75816278-E8FA-4154-9E04-67B6113867E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithEnums", "FunWithEnums\FunWithEnums.csproj", "{C4189D2B-A7FA-453C-9862-F87A94E33ADA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{75816278-E8FA-4154-9E04-67B6113867E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75816278-E8FA-4154-9E04-67B6113867E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75816278-E8FA-4154-9E04-67B6113867E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4189D2B-A7FA-453C-9862-F87A94E33ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4189D2B-A7FA-453C-9862-F87A94E33ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4189D2B-A7FA-453C-9862-F87A94E33ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4189D2B-A7FA-453C-9862-F87A94E33ADA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
