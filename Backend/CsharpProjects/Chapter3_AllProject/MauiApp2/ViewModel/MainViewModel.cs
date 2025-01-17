@@ -12,16 +12,25 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty]
     string? text;
 
-    public MainViewModel()
+    IConnectivity connectivity;
+
+    public MainViewModel(IConnectivity connectivity)
     {
         items = [];
+        this.connectivity = connectivity;
     }
 
     [RelayCommand]
-    void Add()
+    async Task Add()
     {
         if (string.IsNullOrWhiteSpace(Text))
             return;
+
+        if (connectivity.NetworkAccess != NetworkAccess.Internet)
+        {
+            await Shell.Current.DisplayAlert("No Internet", "You need to be connected to the internet to add items.", "OK");
+            return;
+        }
 
         Items.Add(Text);
         // add our item
