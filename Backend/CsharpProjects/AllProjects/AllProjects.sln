@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiApp2", "MauiApp2\MauiAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFinder", "MonkeyFinder\MonkeyFinder.csproj", "{532FF979-02C9-48E9-B3AC-36A71D9D8064}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableRefTypes", "NullableRefTypes\NullableRefTypes.csproj", "{50D0B2EB-4DB6-45D0-8E5B-5386D1B83586}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -119,6 +121,10 @@ Global
 		{532FF979-02C9-48E9-B3AC-36A71D9D8064}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{532FF979-02C9-48E9-B3AC-36A71D9D8064}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{532FF979-02C9-48E9-B3AC-36A71D9D8064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50D0B2EB-4DB6-45D0-8E5B-5386D1B83586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D0B2EB-4DB6-45D0-8E5B-5386D1B83586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D0B2EB-4DB6-45D0-8E5B-5386D1B83586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D0B2EB-4DB6-45D0-8E5B-5386D1B83586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
