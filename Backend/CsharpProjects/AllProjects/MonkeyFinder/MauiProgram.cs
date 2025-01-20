@@ -20,6 +20,7 @@ namespace MonkeyFinder
     		builder.Logging.AddDebug();
 #endif
 
+            builder.Services.AddSingleton<MainPage>();
             return builder.Build();
         }
     }
