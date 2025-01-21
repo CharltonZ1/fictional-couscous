@@ -80,10 +80,32 @@ internal class Employee
     {
         Pay = this switch
         {
-            { PayType: EmployeePayTypeEnum.Commission } => Pay += amount * .10f,
-            { PayType: EmployeePayTypeEnum.Hourly } => Pay += 40f * amount/2080f,
-            { PayType: EmployeePayTypeEnum.Salaried } => Pay += amount,
-            _ => Pay += 0
+            { Age: >= 18, PayType: EmployeePayTypeEnum.Commission,
+                DateHired.Year: > 2020
+            } => Pay += amount * 1.10f,
+            {
+                Age: >= 18, PayType: EmployeePayTypeEnum.Hourly,
+                DateHired.Year: > 2020
+            } => Pay += amount * 1.05f,
+            {
+                Age: >= 18, PayType: EmployeePayTypeEnum.Salaried,
+                DateHired.Year: > 2020
+            } => Pay += amount * 1.03f,
+            {
+                Age: >= 18, PayType: EmployeePayTypeEnum.Commission,
+                DateHired.Year: < 2021
+            } => Pay += amount * 1.05f,
+            {
+                Age: >= 18, PayType: EmployeePayTypeEnum.Hourly,
+                DateHired.Year: < 2021
+            } => Pay += amount * 1.03f,
+            {
+                Age: >= 18, PayType: EmployeePayTypeEnum.Salaried,
+                DateHired.Year: < 2021
+            } => Pay += amount * 1.02f,
+            _ => Pay
+
+
         };
     }
 
