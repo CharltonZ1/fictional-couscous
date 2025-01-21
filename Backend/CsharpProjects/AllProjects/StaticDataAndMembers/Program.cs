@@ -6,15 +6,18 @@ SavingsAccount s1 = new(50);
 SavingsAccount s2 = new(100);
 
 // Print the current interest rate.
-Console.WriteLine("Interest Rate is: {0}", SavingsAccount.GetInterestRate());
+//Console.WriteLine("Interest Rate is: {0}", SavingsAccount.GetInterestRate());
+Console.WriteLine("Interest Rate is: {0}", SavingsAccount.InterestRate);
 
 // Creating a new object, this does NOT 'reset' the interest rate
 
-SavingsAccount.SetInterestRate(0.08);
+//SavingsAccount.SetInterestRate(0.08);
+SavingsAccount.InterestRate = 0.08;
 
 SavingsAccount s3 = new(5000);
 
-Console.WriteLine("Interest Rate is: {0}", SavingsAccount.GetInterestRate());
+//Console.WriteLine("Interest Rate is: {0}", SavingsAccount.GetInterestRate());
+Console.WriteLine("Interest Rate is: {0}", SavingsAccount.InterestRate);
 
 TimeUtilClass.PrintDate();
 TimeUtilClass.PrintTime();

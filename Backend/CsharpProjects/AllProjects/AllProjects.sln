@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleClassExample", "Simpl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticDataAndMembers", "StaticDataAndMembers\StaticDataAndMembers.csproj", "{A2386697-67ED-4DFD-A280-78A24C554761}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PillarsofOOP", "PillarsofOOP\PillarsofOOP.csproj", "{74FB358C-14E8-42D0-94A9-42FA1047FEC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,6 +146,10 @@ Global
 		{A2386697-67ED-4DFD-A280-78A24C554761}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2386697-67ED-4DFD-A280-78A24C554761}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2386697-67ED-4DFD-A280-78A24C554761}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74FB358C-14E8-42D0-94A9-42FA1047FEC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74FB358C-14E8-42D0-94A9-42FA1047FEC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74FB358C-14E8-42D0-94A9-42FA1047FEC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74FB358C-14E8-42D0-94A9-42FA1047FEC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
