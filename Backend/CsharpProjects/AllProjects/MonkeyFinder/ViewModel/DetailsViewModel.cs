@@ -1,5 +1,5 @@
 ﻿namespace MonkeyFinder.ViewModel;
 
-public partial class DetailsViewModel
+public partial class DetailsViewModel : BaseViewModel
 {
 }
