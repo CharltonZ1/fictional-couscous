@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using MonkeyFinder.Services;
 using MonkeyFinder.View;
 
 namespace MonkeyFinder
@@ -20,7 +21,10 @@ namespace MonkeyFinder
     		builder.Logging.AddDebug();
 #endif
 
+            builder.Services.AddSingleton<MonkeyService>();
+            builder.Services.AddSingleton<MainViewModel>();
             builder.Services.AddSingleton<MainPage>();
+            
             return builder.Build();
         }
     }
