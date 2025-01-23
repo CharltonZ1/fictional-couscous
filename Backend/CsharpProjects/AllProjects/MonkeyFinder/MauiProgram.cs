@@ -23,6 +23,10 @@ namespace MonkeyFinder
 
             builder.Services.AddSingleton<MonkeyService>();
             builder.Services.AddSingleton<MainViewModel>();
+
+            builder.Services.AddTransient<DetailsViewModel>();
+            builder.Services.AddTransient<DetailsPage>();
+
             builder.Services.AddSingleton<MainPage>();
             
             return builder.Build();
