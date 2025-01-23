@@ -19,7 +19,8 @@
                 <DataTemplate x:DataType="model:Monkey">
                     <Grid Padding="10">
                         <Frame HeightRequest="125"
-                               Padding="0">
+                               Padding="0"
+                               Style="{StaticResource CardView}">
                             <Grid Padding="0"
                                   ColumnDefinitions="125, *">
                                 <Image Aspect="AspectFill"
@@ -30,8 +31,10 @@
                                 <VerticalStackLayout Grid.Column="1"
                                                      Padding="10"
                                                      VerticalOptions="Center">
-                                    <Label Text="{Binding Name}"/>
-                                    <Label Text="{Binding Location}"/>
+                                    <Label Text="{Binding Name}"
+                                           Style="{StaticResource LargeLabel}"/>
+                                    <Label Text="{Binding Location}"
+                                           Style="{StaticResource MediumLabel}"/>
 
                                 </VerticalStackLayout>
 
@@ -46,7 +49,8 @@
                 Command="{Binding GetMonkeyCommand}"
                 IsEnabled="{Binding IsNotBusy}"
                 Grid.Row="1"
-                Margin="10"/>
+                Margin="10"
+                Style="{StaticResource ButtonOutline}"/>
 
         <ActivityIndicator IsVisible="{Binding IsBusy}"
                            IsRunning="{Binding IsBusy}"
