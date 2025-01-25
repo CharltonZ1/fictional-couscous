@@ -5,13 +5,56 @@ namespace MonkeyFinder.ViewModel;
 
 public partial class MainViewModel : BaseViewModel
 {
-    MonkeyService monkeyService;
+    readonly MonkeyService monkeyService;
     public ObservableCollection<Monkey> Monkeys { get; } = [];
 
-    public MainViewModel(MonkeyService monkeyService)
+    readonly IConnectivity connectivity;
+    readonly IGeolocation geolocation;
+
+    public MainViewModel(MonkeyService monkeyService, IConnectivity connectivity, IGeolocation geolocation)
     {
         Title = "Monkey Finder";
         this.monkeyService = monkeyService;
+        this.connectivity = connectivity;
+        this.geolocation = geolocation;
+
+        //connectivity = DependencyService.Get<IConnectivity>();
+    }
+
+    [RelayCommand]
+    async Task GetClosestMonkey()
+    {
+        if(IsBusy || Monkeys.Count == 0)
+            return;
+
+        try
+        {
+            var location = await geolocation.GetLastKnownLocationAsync();
+
+            location ??= await geolocation.GetLocationAsync(
+                    new GeolocationRequest
+                    {
+                        DesiredAccuracy = GeolocationAccuracy.Medium,
+                        Timeout = TimeSpan.FromSeconds(30),
+
+                    });
+
+            if (location is null)
+                return;
+
+            var closest = Monkeys.OrderBy(m => location.CalculateDistance(m.Latitude, m.Longitude, DistanceUnits.Kilometers))
+                .FirstOrDefault();
+
+            if (closest is null)
+                return;
+
+            await Shell.Current.DisplayAlert("Closest Monkey", $"The closest monkey is {closest.Name} in {closest.Location}", "OK");
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Unable to get closest monkey: {ex.Message}");
+            await Shell.Current.DisplayAlert("Error!", $"Failed to retreive closest monkey: {ex.Message}", "OK");
+        }
     }
 
     [RelayCommand]
@@ -35,6 +78,13 @@ public partial class MainViewModel : BaseViewModel
 
         try
         {
+
+            if (connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await Shell.Current.DisplayAlert("No Connection", "No internet connection", "OK");
+                return;
+            }
+
             IsBusy = true;
             var monkeys = await monkeyService.GetMonkeys();
 
