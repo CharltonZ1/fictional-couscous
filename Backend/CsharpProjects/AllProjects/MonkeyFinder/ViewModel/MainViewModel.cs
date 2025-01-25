@@ -11,6 +11,11 @@ public partial class MainViewModel : BaseViewModel
     readonly IConnectivity connectivity;
     readonly IGeolocation geolocation;
 
+    [ObservableProperty]
+    bool isRefreshing;
+
+    public bool IsBusyAndNotRefreshing => IsBusy && !IsRefreshing;
+
     public MainViewModel(MonkeyService monkeyService, IConnectivity connectivity, IGeolocation geolocation)
     {
         Title = "Monkey Finder";
@@ -71,7 +76,7 @@ public partial class MainViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    async Task GetMonkeyAsync()
+    async Task GetMonkeysAsync()
     {
         if (IsBusy)
             return;
@@ -105,6 +110,7 @@ public partial class MainViewModel : BaseViewModel
         finally
         {
             IsBusy = false;
+            IsRefreshing = false;
         }
     }
 }
