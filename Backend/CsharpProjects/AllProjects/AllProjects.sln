@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phoneword", "Phoneword\Phon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes", "Notes\Notes.csproj", "{D186886A-E754-418E-9B24-D41485EBBECF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alignment", "Alignment\Alignment.csproj", "{B6D77F4B-2273-4278-866E-658A855AEC26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -164,6 +166,11 @@ Global
 		{D186886A-E754-418E-9B24-D41485EBBECF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{D186886A-E754-418E-9B24-D41485EBBECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D186886A-E754-418E-9B24-D41485EBBECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6D77F4B-2273-4278-866E-658A855AEC26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D77F4B-2273-4278-866E-658A855AEC26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D77F4B-2273-4278-866E-658A855AEC26}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B6D77F4B-2273-4278-866E-658A855AEC26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D77F4B-2273-4278-866E-658A855AEC26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
