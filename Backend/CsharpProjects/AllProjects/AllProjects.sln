@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes", "Notes\Notes.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alignment", "Alignment\Alignment.csproj", "{B6D77F4B-2273-4278-866E-658A855AEC26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalculator", "TipCalculator\TipCalculator.csproj", "{B34CE82D-6AC8-4C20-8C59-750460E767F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,10 @@ Global
 		{B6D77F4B-2273-4278-866E-658A855AEC26}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{B6D77F4B-2273-4278-866E-658A855AEC26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6D77F4B-2273-4278-866E-658A855AEC26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B34CE82D-6AC8-4C20-8C59-750460E767F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34CE82D-6AC8-4C20-8C59-750460E767F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34CE82D-6AC8-4C20-8C59-750460E767F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34CE82D-6AC8-4C20-8C59-750460E767F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
