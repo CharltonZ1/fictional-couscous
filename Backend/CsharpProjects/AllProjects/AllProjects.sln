@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalculator", "TipCalcula
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalculator2", "TipCalculator2\TipCalculator2.csproj", "{B24C7A3F-61D9-4A01-BAEC-F9CD9F4207C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiApp3", "MauiApp3\MauiApp3.csproj", "{39B92603-4DC1-4B0E-B7A6-8210E122CE4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -184,6 +186,10 @@ Global
 		{B24C7A3F-61D9-4A01-BAEC-F9CD9F4207C3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{B24C7A3F-61D9-4A01-BAEC-F9CD9F4207C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B24C7A3F-61D9-4A01-BAEC-F9CD9F4207C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39B92603-4DC1-4B0E-B7A6-8210E122CE4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B92603-4DC1-4B0E-B7A6-8210E122CE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B92603-4DC1-4B0E-B7A6-8210E122CE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B92603-4DC1-4B0E-B7A6-8210E122CE4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
