@@ -14,15 +14,15 @@
 
     <Color x:Key="CardBackground">White</Color>
     <Color x:Key="CardBackgroundDark">#1C1C1E</Color>
-    
-    
-    <Color x:Key="Primary">#FFC107</Color>
-    <Color x:Key="PrimaryDark">#FFA000</Color>
-    <Color x:Key="Accent">#00BCD4</Color>
-    <Color x:Key="PrimaryDarkText">#242424</Color>
-    <Color x:Key="Secondary">#DFD8F7</Color>
-    <Color x:Key="SecondaryDarkText">#9880e5</Color>
-    <Color x:Key="Tertiary">#2B0B98</Color>
+
+
+    <Color x:Key="Primary">#62BC46</Color>
+    <Color x:Key="PrimaryDark">#56a53e</Color>
+    <Color x:Key="Accent">#ffffff</Color>
+    <Color x:Key="PrimaryDarkText">#373A36</Color>
+    <Color x:Key="Secondary">#369541</Color>
+    <Color x:Key="SecondaryDarkText">#303330</Color>
+    <Color x:Key="Tertiary">#99CA3C</Color>
 
     <Color x:Key="White">White</Color>
     <Color x:Key="Black">Black</Color>

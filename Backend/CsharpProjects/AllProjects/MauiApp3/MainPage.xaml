@@ -1,94 +1,118 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp3.MainPage">
+             x:Class="MauiApp3.MainPage"
+             Shell.NavBarIsVisible="false">
 
 
 
     <Grid RowDefinitions="Auto, Auto, Auto, *, Auto"
-          ColumnDefinitions="Auto"
-          Padding="40"
-          BackgroundColor="blue">
+          ColumnDefinitions="*"
+          Padding="20,0,20,20"
+          BackgroundColor="white">
         <Label Text="100%"
                    x:Name="batteryPercentage"
-               BackgroundColor="Aqua"
                    HorizontalOptions="Center"
                VerticalOptions="Center"
-               Grid.Row="0"/>
+               Grid.Row="0"
+               Margin="5"/>
 
         <Image Grid.Row="1"
                Source="dotnet_bot.png"
-               BackgroundColor="Red"/>
+               WidthRequest="200"
+               Margin="5"/>
 
-        <VerticalStackLayout Grid.Row="2"
-                             BackgroundColor="Black">
+        <VerticalStackLayout Grid.Row="2">
             <Label Text="Please enter operator code"
-                   BackgroundColor="White"
-                   HorizontalOptions="Center"/>
-            <Border BackgroundColor="White">
+                   HorizontalOptions="Center"
+                   Margin="5"/>
+            <Border 
+                    WidthRequest="314"
+                    HeightRequest="40"
+                    Margin="5">
                 <Label Text="2356"
-                       HorizontalOptions="Center"/>
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
             </Border>
         </VerticalStackLayout>
 
-        <Grid Grid.Row="3"
-              RowDefinitions="Auto, Auto, Auto, Auto, *"
-              ColumnDefinitions="Auto, Auto, Auto"
-              RowSpacing="5"
-              ColumnSpacing="5"
+        <VerticalStackLayout Grid.Row="3"
+                             Margin="5"
+                             HeightRequest="300">
+            <Grid
+              RowDefinitions="*, *, *, *, *"
+              ColumnDefinitions="*, *, *"
+              RowSpacing="7"
+              ColumnSpacing="7"
               HorizontalOptions="Center"
-              VerticalOptions="Center"
-              BackgroundColor="Green">
-            <Button Grid.Row="0"
+              VerticalOptions="Center">
+                <Button Grid.Row="0"
                     Grid.Column="0"
-                    Text="1"/>
-            <Button Grid.Row="0"
+                    Text="1"
+                    Style="{StaticResource KeypadButton}"/>
+                <Button Grid.Row="0"
                     Grid.Column="1"
-                    Text="2"/>
-            <Button Grid.Row="0"
+                    Text="2"
+                    Style="{StaticResource KeypadButton}"/>
+                <Button Grid.Row="0"
                     Grid.Column="2"
-                    Text="3"/>
+                    Text="3"
+                    Style="{StaticResource KeypadButton}"/>
 
-            <Button Grid.Row="1"
+                <Button Grid.Row="1"
                     Grid.Column="0"
-                    Text="4"/>
-            <Button Grid.Row="1"
+                    Text="4"
+                    Style="{StaticResource KeypadButton}"/>
+                <Button Grid.Row="1"
                     Grid.Column="1"
-                    Text="5"/>
-            <Button Grid.Row="1"
+                    Text="5"
+                    Style="{StaticResource KeypadButton}"/>
+                <Button Grid.Row="1"
                     Grid.Column="2"
-                    Text="6"/>
+                    Text="6"
+                    Style="{StaticResource KeypadButton}"/>
 
-            <Button Grid.Row="2"
+                <Button Grid.Row="2"
                     Grid.Column="0"
-                    Text="7"/>
-            <Button Grid.Row="2"
+                    Text="7"
+                    Style="{StaticResource KeypadButton}"/>
+                <Button Grid.Row="2"
                     Grid.Column="1"
-                    Text="8"/>
-            <Button Grid.Row="2"
+                    Text="8"
+                    Style="{StaticResource KeypadButton}"/>
+                <Button Grid.Row="2"
                     Grid.Column="2"
-                    Text="9"/>
+                    Text="9"
+                    Style="{StaticResource KeypadButton}"/>
 
-            <Button Grid.Row="3"
+                <Button Grid.Row="3"
                     Grid.Column="0"
-                    Text="Clear"/>
-            <Button Grid.Row="3"
+                    Text="Clear"
+                    Style="{StaticResource KeypadButton}"
+                    BackgroundColor="{StaticResource Primary}"/>
+                <Button Grid.Row="3"
                     Grid.Column="1"
-                    Text="0"/>
-            <Button Grid.Row="3"
+                    Text="0"
+                    Style="{StaticResource KeypadButton}"/>
+                <Button Grid.Row="3"
                     Grid.Column="2"
-                    Text="X"/>
+                    Text="X"
+                    Style="{StaticResource KeypadButton}"
+                    BackgroundColor="{StaticResource Primary}"/>
 
-            <Button Grid.Row="4"
+                <Button Grid.Row="4"
                     Grid.Column="0"
                     Grid.ColumnSpan="3"
-                    HorizontalOptions="Fill"
+                    Text="Submit"
+                        Style="{StaticResource KeypadSubmit}"
                     />
-        </Grid>
+            </Grid>
+        </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="4"
                              HorizontalOptions="Center"
-                             BackgroundColor="Coral">
+                             VerticalOptions="End"
+                             Margin="5">
             <Label Text="Version: 0.0.11"
                    Margin="0,0,0,30"
                    HorizontalOptions="Center"/>
