@@ -18,11 +18,13 @@
                Margin="5"/>
 
         <Image Grid.Row="1"
-               Source="dotnet_bot.png"
+               Source="logo_new.png"
                WidthRequest="200"
                Margin="5"/>
 
-        <VerticalStackLayout Grid.Row="2">
+        <VerticalStackLayout Grid.Row="3"
+                             Margin="5"
+                             HeightRequest="300">
             <Label Text="Please enter operator code"
                    HorizontalOptions="Center"
                    Margin="5"/>
@@ -34,11 +36,6 @@
                        HorizontalOptions="Center"
                        VerticalOptions="Center"/>
             </Border>
-        </VerticalStackLayout>
-
-        <VerticalStackLayout Grid.Row="3"
-                             Margin="5"
-                             HeightRequest="300">
             <Grid
               RowDefinitions="*, *, *, *, *"
               ColumnDefinitions="*, *, *"
