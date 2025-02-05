@@ -27,7 +27,7 @@
         <!-- Prompt Section -->
         <VerticalStackLayout Grid.Row="3"
                          Margin="5"
-                         HeightRequest="300">
+                         HeightRequest="350">
             <Label Text="{Binding PromptMessage}"
                HorizontalOptions="Center"
                Margin="5" />
@@ -37,7 +37,7 @@
                 Margin="5">
                 <Label Text="{Binding InputText}"
                    HorizontalOptions="Center"
-                   VerticalOptions="Center" />
+                   VerticalOptions="Center"/>
             </Border>
 
             <!-- Keypad Grid -->
@@ -46,7 +46,8 @@
               RowSpacing="7"
               ColumnSpacing="7"
               HorizontalOptions="Center"
-              VerticalOptions="Center">
+              VerticalOptions="Center"
+                  Padding="2">
 
                 <!-- Row 0 -->
                 <Button Grid.Row="0" Grid.Column="0" Text="1" Style="{StaticResource KeypadButton}" Command="{Binding KeyPressCommand}" CommandParameter="1" />
@@ -69,7 +70,14 @@
                 <Button Grid.Row="3" Grid.Column="2" Text="X" Style="{StaticResource KeypadButton}" BackgroundColor="{StaticResource Primary}" Command="{Binding BackspaceCommand}"/>
 
                 <!-- Row 4 -->
-                <Button Grid.Row="4"  Text="Submit"  Command="{Binding SubmitCommand}"/>
+
+
+
+                <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Text="Submit" Style="{StaticResource KeypadSubmit}"  Command="{Binding SubmitCommand}"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"/>
+
+
             </Grid>
         </VerticalStackLayout>
 
