@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp3.Views.KeypadView">
+             x:Class="MauiApp3.Views.KeypadView"
+             xmlns:viewmodel="clr-namespace:MauiApp3.ViewModels"
+             x:DataType="viewmodel:KeypadViewModel">
+    
     <Grid RowDefinitions="Auto, Auto, Auto, *, Auto"
       ColumnDefinitions="*"
       Padding="20,0,20,20"
@@ -25,14 +28,14 @@
         <VerticalStackLayout Grid.Row="3"
                          Margin="5"
                          HeightRequest="300">
-            <Label Text="Please enter operator code"
+            <Label Text="{Binding PromptMessage}"
                HorizontalOptions="Center"
                Margin="5" />
 
             <Border WidthRequest="314"
                 HeightRequest="40"
                 Margin="5">
-                <Label Text="2356"
+                <Label Text="{Binding InputText}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
             </Border>
@@ -46,27 +49,27 @@
               VerticalOptions="Center">
 
                 <!-- Row 0 -->
-                <Button Grid.Row="0" Grid.Column="0" Text="1" Style="{StaticResource KeypadButton}" />
-                <Button Grid.Row="0" Grid.Column="1" Text="2" Style="{StaticResource KeypadButton}" />
-                <Button Grid.Row="0" Grid.Column="2" Text="3" Style="{StaticResource KeypadButton}" />
+                <Button Grid.Row="0" Grid.Column="0" Text="1" Style="{StaticResource KeypadButton}" Command="{Binding KeyPressCommand}" CommandParameter="1" />
+                <Button Grid.Row="0" Grid.Column="1" Text="2" Style="{StaticResource KeypadButton}" Command="{Binding KeyPressCommand}" CommandParameter="2"/>
+                <Button Grid.Row="0" Grid.Column="2" Text="3" Style="{StaticResource KeypadButton}" Command="{Binding KeyPressCommand}" CommandParameter="3"/>
 
                 <!-- Row 1 -->
-                <Button Grid.Row="1" Grid.Column="0" Text="4" Style="{StaticResource KeypadButton}" />
-                <Button Grid.Row="1" Grid.Column="1" Text="5" Style="{StaticResource KeypadButton}" />
-                <Button Grid.Row="1" Grid.Column="2" Text="6" Style="{StaticResource KeypadButton}" />
+                <Button Grid.Row="1" Grid.Column="0" Text="4" Style="{StaticResource KeypadButton}" Command="{Binding KeyPressCommand}" CommandParameter="4"/>
+                <Button Grid.Row="1" Grid.Column="1" Text="5" Style="{StaticResource KeypadButton}" Command="{Binding KeyPressCommand}" CommandParameter="5"/>
+                <Button Grid.Row="1" Grid.Column="2" Text="6" Style="{StaticResource KeypadButton}" Command="{Binding KeyPressCommand}" CommandParameter="6"/>
 
                 <!-- Row 2 -->
-                <Button Grid.Row="2" Grid.Column="0" Text="7" Style="{StaticResource KeypadButton}" />
-                <Button Grid.Row="2" Grid.Column="1" Text="8" Style="{StaticResource KeypadButton}" />
-                <Button Grid.Row="2" Grid.Column="2" Text="9" Style="{StaticResource KeypadButton}" />
+                <Button Grid.Row="2" Grid.Column="0" Text="7" Style="{StaticResource KeypadButton}" Command="{Binding KeyPressCommand}" CommandParameter="7"/>
+                <Button Grid.Row="2" Grid.Column="1" Text="8" Style="{StaticResource KeypadButton}" Command="{Binding KeyPressCommand}" CommandParameter="8"/>
+                <Button Grid.Row="2" Grid.Column="2" Text="9" Style="{StaticResource KeypadButton}" Command="{Binding KeyPressCommand}" CommandParameter="9"/>
 
                 <!-- Row 3 -->
-                <Button Grid.Row="3" Grid.Column="0" Text="Clear" Style="{StaticResource KeypadButton}" BackgroundColor="{StaticResource Primary}" />
-                <Button Grid.Row="3" Grid.Column="1" Text="0" Style="{StaticResource KeypadButton}" />
-                <Button Grid.Row="3" Grid.Column="2" Text="X" Style="{StaticResource KeypadButton}" BackgroundColor="{StaticResource Primary}" />
+                <Button Grid.Row="3" Grid.Column="0" Text="Clear" Style="{StaticResource KeypadButton}" BackgroundColor="{StaticResource Primary}" Command="{Binding ClearCommand}"/>
+                <Button Grid.Row="3" Grid.Column="1" Text="0" Style="{StaticResource KeypadButton}" Command="{Binding KeyPressCommand}" CommandParameter="0"/>
+                <Button Grid.Row="3" Grid.Column="2" Text="X" Style="{StaticResource KeypadButton}" BackgroundColor="{StaticResource Primary}" Command="{Binding BackspaceCommand}"/>
 
                 <!-- Row 4 -->
-                <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Text="Submit" Style="{StaticResource KeypadSubmit}" />
+                <Button Grid.Row="4"  Text="Submit"  Command="{Binding SubmitCommand}"/>
             </Grid>
         </VerticalStackLayout>
 

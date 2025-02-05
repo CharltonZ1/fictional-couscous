@@ -23,7 +23,7 @@
                        IsClippedToBounds="True"
                        Padding="0"
                        Margin="0, 80, 0, 0">
-                    <Image Source="{Binding Monkey.Image}" 
+                    <Image Source="{Binding Monkey.Image}"
                            Aspect="AspectFill"
                            HeightRequest="160"
                            WidthRequest="160"
@@ -39,8 +39,9 @@
                     Margin="8"
                     Style="{StaticResource ButtonOutline}"/>
 
-            <VerticalStackLayout Padding="10" Spacing="10">
-                <Label Text="{Binding Monkey.Details}" 
+            <VerticalStackLayout Padding="10"
+                    Spacing="10">
+                <Label Text="{Binding Monkey.Details}"
                        Style="{StaticResource MediumLabel}"/>
                 <Label Text="{Binding Monkey.Location, StringFormat='Location {0}'}"
                        Style="{StaticResource SmallLabel}"/>

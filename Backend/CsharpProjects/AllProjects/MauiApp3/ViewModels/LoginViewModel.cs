@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace MauiApp3.ViewModels;
 
-namespace MauiApp3.ViewModels
+public partial class LoginViewModel : KeypadViewModel
 {
-    internal class LoginViewModel
-    {
-    }
+    public LoginViewModel() : base("Please enter operator code") { }
+
+    //[RelayCommand]
+    //public override void OnSubmit()
+    //{
+    //    if (InputText == "1234")
+    //    {
+    //        PromptMessage = "Success!";
+    //    }
+    //    else
+    //    {
+    //        PromptMessage = "Invalid operator code";
+    //    }
+    //}
 }
