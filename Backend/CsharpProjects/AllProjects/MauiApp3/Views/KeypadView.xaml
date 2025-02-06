@@ -11,12 +11,18 @@
       BackgroundColor="White">
 
         <!-- Battery Percentage Label -->
-        <Label x:Name="batteryPercentage"
-           Text="100%"
+        <HorizontalStackLayout Grid.Row="0"
+           HorizontalOptions="Center"
+           VerticalOptions="Center">
+            <Image Source="{Binding SignalIcon}" WidthRequest="16" Margin="2"/>
+            <Image Source="{Binding BatteryIcon}" WidthRequest="16" Margin="2"/>
+
+            <Label x:Name="batteryPercentage"
+           Text="{Binding BatteryLevel}"
            HorizontalOptions="Center"
            VerticalOptions="Center"
-           Grid.Row="0"
-           Margin="5" />
+           Margin="2" />
+        </HorizontalStackLayout>
 
         <!-- Logo Image -->
         <Image Grid.Row="1"
@@ -32,7 +38,7 @@
                HorizontalOptions="Center"
                Margin="5" />
 
-            <Border WidthRequest="314"
+            <Border WidthRequest="312"
                 HeightRequest="40"
                 Margin="5">
                 <Label Text="{Binding InputText}"
@@ -46,8 +52,7 @@
               RowSpacing="7"
               ColumnSpacing="7"
               HorizontalOptions="Center"
-              VerticalOptions="Center"
-                  Padding="2">
+              VerticalOptions="Center">
 
                 <!-- Row 0 -->
                 <Button Grid.Row="0" Grid.Column="0" Text="1" Style="{StaticResource KeypadButton}" Command="{Binding KeyPressCommand}" CommandParameter="1" />
@@ -87,6 +92,10 @@
                          VerticalOptions="End"
                          Margin="5">
             <Label Text="Version: 0.0.11"
+               Margin="0,0,0,30"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"/>
+            <Label Text="{Binding IdDevice}"
                Margin="0,0,0,30"
                HorizontalOptions="Center" />
             <Label Text="021 879 399"
